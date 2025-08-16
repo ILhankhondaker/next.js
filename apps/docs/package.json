@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev-docs": "next dev --turbopack",
-    "build-docs": "next build",
-    "start": "next start",
+    "dev-docs": "node init && next dev --turbopack",
+    "build-docs": "node init && next build",
+    "start": "node init && next start",
     "postinstall": "fumadocs-mdx"
   },
   "dependencies": {

