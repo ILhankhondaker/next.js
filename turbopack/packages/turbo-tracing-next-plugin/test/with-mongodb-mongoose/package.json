@@ -2,9 +2,9 @@
   "name": "@vercel/turbo-tracing-test-app",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "cross-env MONGODB_URI=localhost:27017 next build",
-    "start": "next start",
+    "dev": "node init && next dev",
+    "build": "node init && cross-env MONGODB_URI=localhost:27017 next build",
+    "start": "node init && next start",
     "lint:prettier": "prettier -c . --cache --ignore-path=../../../../.prettier-ignore"
   },
   "dependencies": {

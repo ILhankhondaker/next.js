@@ -1,6 +1,6 @@
 {
   "name": "@next/third-parties",
-  "version": "15.4.2-canary.49",
+  "version": "15.4.2-canary.50",
   "repository": {
     "url": "vercel/next.js",
     "directory": "packages/third-parties"
@@ -17,16 +17,16 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "node ../../scripts/rm.mjs dist && tsc -d -p tsconfig.json",
+    "build": "node init && node ../../scripts/rm.mjs dist && tsc -d -p tsconfig.json",
     "prepublishOnly": "cd ../../ && turbo run build",
-    "dev": "tsc -d -w -p tsconfig.json",
+    "dev": "node init && tsc -d -w -p tsconfig.json",
     "typescript": "tsec --noEmit -p tsconfig.json"
   },
   "dependencies": {
     "third-party-capital": "1.0.20"
   },
   "devDependencies": {
-    "next": "15.4.2-canary.49",
+    "next": "15.4.2-canary.50",
     "outdent": "0.8.0",
     "prettier": "2.5.1",
     "typescript": "5.8.2"

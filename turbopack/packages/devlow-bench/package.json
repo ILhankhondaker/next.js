@@ -17,7 +17,7 @@
     "lint": "eslint src/",
     "prerelease": "pnpm run build",
     "test": "node --import tsx --test src/**/*-test.ts",
-    "build": "tsc"
+    "build": "node init && tsc"
   },
   "files": [
     "dist"
